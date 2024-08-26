@@ -2,9 +2,71 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">CourseHub</h1>
-    <p>
-        <a class ="btn btn-primary"  href="/course/apply">Apply</a>
-    </p>    
+<!-- Ana Sayfa Başlangıcı -->
+<div class="container-fluid bg-light py-5">
+    <div class="container text-center py-5">
+        <h1 class="display-4 text-primary font-weight-bold">Welcome to Course Hub</h1>
+        <p class="lead text-secondary my-4">
+            Discover a variety of courses tailored to your needs. Start learning today!
+        </p>
+        <a class="btn btn-lg btn-primary shadow-lg" asp-controller="Course" asp-action="Apply">Apply Now</a>
+    </div>
 </div>
+
+<!-- Modern Tasarım için Arka Plan Görseli -->
+<div class="container-fluid hero-image">
+    <div class="overlay"></div>
+    <div class="text-center text-white py-5">
+        <h2 class="display-5">Empower Your Learning Journey</h2>
+        <p class="lead">Join thousands of learners from around the world.</p>
+    </div>
+</div>
+
+<!-- Footer Bölümü -->
+<footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">© 2024 Course Hub. All rights reserved.</p>
+</footer>
+
+<!-- Stil -->
+<style>
+    .hero-image {
+        background-image: url('~/images/hero.jpg'); /* Arka plan görselinin yolu */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 300px;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Yarı saydam siyah bir katman */
+    }
+
+    .hero-image .text-center {
+        position: relative;
+        z-index: 2;
+    }
+
+    .bg-light {
+        background-color: #f8f9fa !important;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+    footer {
+        background-color: #343a40;
+        color: #fff;
+    }
+</style>
